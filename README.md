@@ -4,6 +4,10 @@ Realtime sketch-to-image web app powered by `fal-ai/flux-2/klein` realtime.
 
 ![Klein Realtime Screenshot](./klein-real-time-screenshot.png)
 
+## Inspired By
+
+- [Tomáš Procházka on X](https://x.com/tomasproc/status/2023769284384591913)
+
 ## Features
 
 - Draw on canvas and get live generated output
