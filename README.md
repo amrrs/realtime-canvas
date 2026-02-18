@@ -4,6 +4,12 @@ Realtime sketch-to-image web app powered by `fal-ai/flux-2/klein` realtime.
 
 ![Klein Realtime Screenshot](./klein-real-time-screenshot.png)
 
+## Demo Video
+
+<video src="./realtime%20canvas.mp4" controls width="900"></video>
+
+If inline playback is unavailable on your viewer, open the file directly: [realtime canvas.mp4](./realtime%20canvas.mp4).
+
 ## Inspired By
 
 - [Tomáš Procházka on X](https://x.com/tomasproc/status/2023769284384591913)
