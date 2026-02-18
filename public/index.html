@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klein Realtime</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="workspace">
+      <!-- Drawing canvas pane -->
+      <div class="pane" id="draw-pane">
+        <div class="pane-label">DRAW</div>
+        <img id="merge-output-img" alt="" />
+        <canvas id="draw-canvas"></canvas>
+        <button id="clear-btn" title="Clear canvas">&#x2715;</button>
+      </div>
+
+      <!-- Divider -->
+      <div id="divider"></div>
+
+      <!-- AI output pane -->
+      <div class="pane" id="output-pane">
+        <div class="pane-label">KLEIN</div>
+        <div id="output-wrapper">
+          <img id="output-img" alt="AI output" />
+          <div id="output-placeholder">
+            <span>Start drawing&hellip;</span>
+            <span id="status" class="status-text">connecting</span>
+          </div>
+          <div id="processing-indicator"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Style preset bar -->
+    <div id="preset-bar">
+      <div id="bar-controls">
+        <button class="control-btn" id="theme-toggle-btn" type="button">Theme: Dark</button>
+        <button class="control-btn active" id="mode-split-btn" type="button">Split</button>
+        <button class="control-btn" id="mode-merge-btn" type="button">Merge</button>
+        <button class="control-btn danger" id="bar-clear-btn" type="button">Clear</button>
+      </div>
+      <div id="preset-track">
+        <button class="preset active" data-preset="studio">Studio</button>
+        <button class="preset" data-preset="toy">Toy</button>
+        <button class="preset" data-preset="ceramic">Ceramic</button>
+        <button class="preset" data-preset="plush">Plush</button>
+        <button class="preset" data-preset="wood">Wood</button>
+        <button class="preset" data-preset="metal">Metal</button>
+        <button class="preset" data-preset="stone">Stone</button>
+        <button class="preset" data-preset="anime">Anime</button>
+        <button class="preset" data-preset="glass">Glass</button>
+        <button class="preset" data-preset="ink">Ink</button>
+        <button class="preset" data-preset="neon">Neon</button>
+      </div>
+      <a id="powered-by-fal" href="https://fal.ai/models/fal-ai/flux-2/klein/realtime" target="_blank" rel="noreferrer noopener" aria-label="Powered by fal.ai">
+        <img id="fal-logo" src="/falailogo.png" alt="fal.ai logo" />
+        <span>Powered by fal.ai</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- fal client from CDN (ESM) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
