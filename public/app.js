@@ -215,6 +215,8 @@ function initFalRealtime() {
       mergeOutputImg.src = normalizedSrc;
       outputImg.classList.add("visible");
       mergeOutputImg.classList.add("visible");
+      playUpdateAnimation(outputImg);
+      playUpdateAnimation(mergeOutputImg);
       placeholder.classList.add("hidden");
       if (viewMode === "merge") {
         workspaceEl.classList.remove("show-sketch");
@@ -346,6 +348,13 @@ function clearGeneratingState() {
   indicator.classList.remove("active");
   clearTimeout(generationTimeout);
   generationTimeout = null;
+}
+
+function playUpdateAnimation(el) {
+  el.classList.remove("just-updated");
+  // Force reflow so repeated updates retrigger the animation.
+  void el.offsetWidth;
+  el.classList.add("just-updated");
 }
 
 function getThemePalette() {
